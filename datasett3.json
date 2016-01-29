@@ -1,0 +1,132 @@
+[
+    {
+        "navn": "Kabel",
+        "id": 92,
+        "egenskapstyper": [
+            {
+                "navn": "Bruksområde",
+                "id": 1274
+            },
+            {
+                "navn": "Driftsattår",
+                "id": 4076
+            },
+            {
+                "navn": "Farge",
+                "id": 1293
+            },
+            {
+                "navn": "Framføringsveg",
+                "id": 2023
+            },
+            {
+                "navn": "Typebetegnelse",
+                "id": 1148
+            }
+        ]
+    },
+    {
+        "navn": "Kum",
+        "id": 83,
+        "egenskapstyper": [
+            {
+                "navn": "Avstand fra vegkant",
+                "id": 2388
+            },
+            {
+                "navn": "Bruksområde",
+                "id": 1269
+            },
+            {
+                "navn": "Dybde",
+                "id": 1586
+            },
+            {
+                "navn": "Lokk/rist, type",
+                "id": 2290
+            },
+            {
+                "navn": "Materialtype",
+                "id": 1411
+            },
+            {
+                "navn": "Oppslammingstid",
+                "id": 2121
+            },
+            {
+                "navn": "Type",
+                "id": 1141
+            }
+        ]
+    },
+    {
+        "navn": "Lukket rørgrøft",
+        "id": 78,
+        "egenskapstyper": [
+            {
+                "navn": "Dybde",
+                "id": 1657
+            },
+            {
+                "navn": "Type",
+                "id": 1268
+            },
+            {
+                "navn": "Varmekabler",
+                "id": 1831
+            }
+        ]
+    },
+    {
+        "navn": "Rørledning",
+        "id": 77,
+        "egenskapstyper": [
+            {
+                "navn": "Bruksområde",
+                "id": 1267
+            },
+            {
+                "navn": "Diameter, indre",
+                "id": 1724
+            },
+            {
+                "navn": "Materialtype",
+                "id": 1410
+            }
+        ]
+    },
+    {
+        "navn": "Stikkrenne/kulvert",
+        "id": 79,
+        "egenskapstyper": [
+            {
+                "navn": "Bruksområde",
+                "id": 6981
+            },
+            {
+                "navn": "Leggeår",
+                "id": 4556
+            },
+            {
+                "navn": "Materialtype",
+                "id": 6983
+            },
+            {
+                "navn": "Tverrsnittsform",
+                "id": 6984
+            },
+            {
+                "navn": "Type innløp",
+                "id": 1939
+            },
+            {
+                "navn": "Type utløp",
+                "id": 1940
+            },
+            {
+                "navn": "Lengde",
+                "id": 1323
+            }
+        ]
+    }
+]

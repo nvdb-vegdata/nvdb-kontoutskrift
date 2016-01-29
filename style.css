@@ -1,0 +1,256 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Open+Sans+Condensed:300);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  background: #f7f7f7;
+}
+
+div.header {
+  overflow: auto;
+  border-top: 2px solid #58b02c;
+  background: #fff;
+  padding: 2.5em 5em 2.5em 5em;
+  border-bottom: 0.2em solid #eee;
+}
+
+h1 {
+  font-size: 4.8em;
+  margin: 0 0 0.5em 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+}
+
+
+/* Tabeller */
+
+
+table {
+  border-collapse: collapse;
+  margin: 5em;
+}
+
+caption {
+  caption-side: bottom;
+  text-align: left;
+  padding: 20px 15px 10px 15px;
+  background: #f0f0f0;
+}
+
+tr.rad2 td.tittel { 
+  font-weight: 400;
+}
+
+tr.kolonneoverskrift th {
+  border-bottom: 0;
+  text-align: center;
+  padding-bottom: 0;
+  font-weight: 400;
+}
+
+tr.sumrad td {
+  font-weight: 700;
+}
+
+
+td, th {
+  padding: 10px 15px;
+  border-bottom: 0px solid #f7f7f7;
+}
+
+th {
+  color: #fff;
+  background: #58b02c;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+th.radoverskrift {
+  font-weight: 400;
+  text-align: left;
+}
+
+td {
+  background: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+
+.objekttype td {
+  border-top: 5px solid #f7f7f7;
+}
+
+td.tittel {
+  font-weight: 700;
+  text-align: left;
+}
+
+
+select {
+  font-size: 1.4em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 4px;
+}
+
+select:hover {
+  border-color: #000;
+  cursor: pointer;
+}
+
+input[type=submit] {
+  font-size: 1.4em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding: 6px 10px 6px 10px;
+  margin: 26px 0 0 0;
+  color: #fff;
+  border: 1px solid #008ec2;
+  background: #008ec2;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #ff9600;
+  border-color: #ff9600;
+}
+
+.prosent span {
+  color: #fff;  
+  font-weight: 700;
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.v100 {
+  background: #1a9850;
+}
+
+.v80-100 {
+  background: #22A41C;
+}
+
+.v60-80 {
+  background: #6BB11F;
+}
+
+.v40-60 {
+  background: #BDBD21;
+}
+
+.v20-40 {
+  background: #CA7B24;
+}
+
+.v0-20 {
+  background: #D72F27;
+}
+
+/*
+a:hover .prosent span {
+  background: #ff9600;
+}
+*/
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  width: 40em;
+  font-size: 1.4em;
+  margin: 0 0 1em 0;
+  line-height: 1.5;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+}
+
+.antallobjekter {
+  text-align: left; 
+  font-style: italic;
+  color: #888;
+}
+
+
+
+ul {
+  width: 40em;
+  font-size: 1.4em;
+  margin: 0 0 1em 2em;
+  line-height: 1.5;
+}
+
+li {
+  margin: 0 0 0.5em 0;
+}
+
+h2 {
+  font-size: 2.4em;
+  margin: 1em 0 0.5em 0;
+  font-weight: 400;
+}
+
+.ingress {
+  font-size: 1.6em;
+}
+
+.beskrivelse {
+  border-bottom: 1px solid #eee;
+  padding: 0 0 1em 0;
+  margin: 0 0 2.5em 0;
+}
+
+.ekstra {
+  padding: 0 0 1em 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #008ec2;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.lastned {
+  font-size: 1.3em;
+  margin-left: 1em;
+}
+
+label {
+  float: left;
+  margin: 0 2em 0 0;
+}
+
+label span {
+  display: block;
+  margin: 0 0 0.5em 0;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.velg_region {
+  cursor: pointer;
+}

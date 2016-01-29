@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html ng-app="nvdbkontoutskrift">
+<head>
+    <title>Kontoutskrift fra Nasjonal vegdatabank</title>
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular-sanitize.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/nvdb.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+    <script src="js/FileSaver.min.js" type="text/javascript"></script>
+    
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    
+</head>
+<body ng-controller="kontoutskriftCtrl">
+
+<div class="header">
+
+    <h1><a href="/kontoutskrift/">Kontoutskrift fra Nasjonal vegdatabank</a></h1>
+    
+   
+    <div class="beskrivelse">
+        <p class="ingress">Dette er et nettsted som gir en indikasjon på datakvalitet i NVDB. 
+        Tabellen nedenfor inneholder et utvalg av sentrale objekttyper, og viser hvor fullstendig egenskapsdata er 
+        registrert. Prosenttallet angir hvor stor andel av de registrerte objektene som har en verdi for 
+        den påkrevde egenskapstypen. <button ng-click="ekstra = true" ng-hide="ekstra">Les mer</button>
+        <button ng-click="ekstra = false" ng-show="ekstra">Skjul</button>
+        </p>
+
+        <div ng-show="ekstra" class="ekstra">
+            <h2>Litt grunnleggende om data i NVDB</h2>
+            
+            <p>NVDB består av et sett med objekttyper. Eksempel på objekttyper er Fartsgrense, 
+            Rekkverk og Høydebegrensing. For hver objekttype er det definert et sett med egenskaper 
+            der det angis detaljert informasjon om objektet. På objekttypen Fartsgrenser har vi 
+            eksempelvis egenskapene Fartsgrense (angir fartsgrenseverdi) og &laquo;Gyldig fra dato&raquo; 
+            (angir når fartsgrenseskiltet ble avdekket ute på vegen). </p>
+            
+            <p>På hver objekttype er det definert hvor viktig en egenskap er. Vi skiller på påkrevde, 
+            betingede og opsjonelle egenskaper. En påkrevd egenskap skal alltid registreres, en betinget 
+            egenskap skal registreres under bestemte forutsetninger og en opsjonell egenskap registreres 
+            dersom ønskelig. </p>
+            
+            <p>I kontoutskriften måles kun påkrevde egenskaper. </p>
+            
+            <h2>Måling av datakvalitet</h2>
+            
+            <p>Kontoutskriften er en veldig forenklet måling av datakvalitet i NVDB. Datakvalitet kan i 
+            teorien måles på flere måter: </p>
+            
+            <ul>
+                <li>Er alt utstyr langs våre veger registrert i NVDB?</li>
+                <li>Registreres informasjonen til riktig tid?</li>
+                <li>Stemmer informasjonen i NVDB overens med de faktiske forhold langs vegen?</li>
+                <li>Er det registrert tilstrekkelig med informasjon på de objektene som finnes i NVDB?</li>
+            </ul>
+            
+            <p>De tre første punktene er det vanskelig å måle uten å ha full oversikt over endringer som 
+            gjørs langs vegen, og sammenligne dette med datagrunnlaget i NVDB. Avvik kan eventuelt 
+            kartlegges og estimeres ved hjelp av stikkprøver. </p>
+            
+            <p>Det siste punktet kan derimot måles ved utelukkende å analysere datagrunnlaget som finnes 
+            i NVDB i dag. Kontoutskriftene er en forenklet analyse av datagrunnlaget. </p>
+            
+            <h2>Hva slags informasjon gir kontoutskriften</h2>
+            
+            <p>Følgende informasjon kan leses ut fra kontoutskriftene:</p>
+            
+            <ul>
+                <li>Totalstatus på et utvalg av objekttyper</li>
+                <li>Forskjeller i registreringspraksis på tvers av regionene</li>
+                <li>Forskjeller i registreringspraksis på tvers av fylker</li>
+                <li>Hvilke objekttyper fungerer registreringen godt/mindre godt for</li>
+                <li>I hvilken grad påkrevde egenskaper er registrert</li>
+            </ul>
+            
+            <p>I kolonnene til venstre listes objekttyper og tilhørende egenskaper. For hver objekttype 
+            vises totalt antall forekomster registrert i NVDB per fylke eller region. For hver egenskap 
+            vises andelen forekomster som har gitt verdi for påkrevde egenskaper. </p>
+            
+            <p>Objekttypene er delt i tre kategorier: forvaltningsdata, vegutstyr og VA&amp;EL. Dette for 
+            å reduserer mengden informasjon som skal vises på samtidig. Det er også mulig å skille på 
+            riks- og fylkesveger. </p>
+            
+            <h2>Hva slags informasjon gir ikke kontoutskriften</h2>
+            
+            <p>Følgende informasjon kan ikke hentes fra kontoutskriftene:</p>
+            
+            <ul>
+                <li>I hvilken grad registrert informasjon stemmer med virkeligheten ute på vegen, 
+                og om data er registrert til riktig tid. </li>
+            </ul>
+            
+            <p>Kontoutskriften viser kun informasjon om datakvalitet som kan hentes direkte ut fra NVDB 
+            uten noen form for bearbeiding eller sammenstilling. Dette medfører noen begrensinger:</p>
+            
+            <ul>
+                <li>Kontoutskriften viser kun status på et utvalg av datasett og egenskaper. 
+                Det er per dags dato ikke mulig å lage tilsvarende utskrift for samtlige 377 datasett. </li>
+                <li>Det er ikke relevant å måle datakvalitet på denne måte for alle datasett. 
+                For enkelte datasett er det viktigere å vite om en forekomst faktisk er registrert i NVDB 
+                enn om alle egenskaper er angitt. Eksempel på slike datasett er Svingerestriksjon og 
+                Innkjøring forbudt, to datasett som inngår i et navigerbart vegnett. For andre datasett 
+                er det mer relevant å vite hvor stor andel av vegnettet det mangler data for. Vegbredde 
+                er eksempel på et slikt datasett. </li>
+            </ul>
+            
+            <h2>Kontaktinformasjon</h2>
+            
+            <p>For spørsmål vedrørende datainnholdet i NVDB, kan NVDB-koordinatorene i hver region kontaktes.</p>
+            
+            <ul>
+                <li><strong>Region Øst:</strong> Jostein Henriksen (Østfold), WIllie Juul Pedersen (Oslo/Akershus), 
+                Tu Anh Ngu (Oslo/Akershus), Stian Johansen (Hedmark), Kari Anne Midtvold (Oppland)</li>
+                <li><strong>Region Sør:</strong> Stein Rinholm, Geir Lauvrak (Aust-Agder), Tina Vestersager (Buskerud), Raymond Hermansen (Telemark), </li>
+                <li><strong>Region Vest:</strong> John Terje Fløtterud, Åsmund FInsrud Dale</li>
+                <li><strong>Region Midt:</strong> Bent Halvorsen</li>
+                <li><strong>Region Nord:</strong> Kurt Johnsen (Finnmark), Sigurd Skjelmo (Troms/Midre Hålogaland) og Arnt Albertsen (Nordland)</li>
+            </ul>
+            
+            <p>For spørsmål om den tekniske løsningen, kan Magnus Haugsand i Vegdirektoratet kontaktes.</p>
+        
+        </div>
+    </div>
+
+    <label><span>Datasett</span>
+    <select ng-model="datavalg">
+        <option value="1">Forvaltningsdata</option>
+        <option value="2">Vegutstyr</option>
+        <option value="3">VA og EL</option>
+    </select>
+    </label>
+
+    <label><span>Område</span>
+    <select ng-model="inndeling" ng-change="byttOmrade()">
+        <option value="region">Regionvis inndeling</option>
+        <option value="fylke">Fylkesvis inndeling</option>
+    </select>
+    </label>
+    
+    <label><span>Vegnett</span>
+    <select ng-model="vegkategori">
+        <option value="er">Riksveger</option>
+        <option value="f">Fylkesveger</option>
+        <option value="erf">Riks- og fylkesveger</option>
+    </select>
+    </label>
+    
+    <label><span>Tidspunkt</span>
+    <select ng-model="dato" ng-change="byttDato()">
+        <option value="idag">Dagens status</option>
+        <option ng-repeat="verdi in historikk">{{verdi}}</option>
+    </select>
+    </label>
+    
+    <input type="submit" value="Hent resultat" ng-click="hentResultat()" ng-show="dato == 'idag'">
+    <button ng-click="lagreResultat()" ng-show="dato == 'idag'" class="lastned">Last ned</button>
+
+</div>
+
+
+    <table>
+        <caption>
+            <p class="prosent">
+                <span class="v0-20">0-40 %</span>
+                <span class="v20-40">41-60 %</span>
+                <span class="v40-60">61-80 %</span>
+                <span class="v60-80">81-90 %</span>
+                <span class="v80-100">91-99 %</span>
+                <span class="v100">100 %</span>
+            </p>
+
+        </caption>
+        <thead>
+            <tr class="kolonneoverskrift">  
+                <th></th>
+                <th></th>
+                <th ng-attr-colspan="{{omrade[inndeling].length}}">{{inndeling}}</th>
+            </tr>
+            <tr>
+                <th class="radoverskrift">Objekttype</th>
+                <th class="radoverskrift">Påkrevd egenskapstype</th>
+                <th ng-repeat="kolonne in omrade[inndeling]">
+                    <ng-switch on="inndeling">
+                        <span ng-switch-when="region" ng-click="velgRegion(kolonne.nr)" class="velg_region">{{kolonne.navn}}</span>
+                        <span ng-switch-default>{{kolonne.navn}}</span>
+                    </ng-switch>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat-start="objekttype in datasett[datavalg]" class="objekttype">
+                <td class="tittel">
+                    <a ng-href="http://129.241.253.50:8080/datakatalog/eksport/produktspesifikasjon/{{objekttype.id}}.pdf" target="_blank" ng-attr-title="Åpne produktspesifikasjon for {{objekttype.navn}}">
+                    {{objekttype.navn}}</a>
+                </td>
+                <td class="antallobjekter">Antall objekter</td>
+                <td ng-repeat="kolonne in omrade[inndeling]" class="resultat" title="Antall forekomster av &laquo;{{objekttype.navn}}&raquo; i {{kolonne.navn}}">
+                    {{resultat[objekttype.id][inndeling+kolonne.nr][vegkategori].antall}}
+                </td>
+            </tr>
+           <tr ng-repeat="egenskapstype in objekttype.egenskapstyper" class="rad2">
+                <td></td>
+                <td class="tittel">{{egenskapstype.navn}}</td>
+                <td ng-repeat="kolonne in omrade[inndeling]" class="resultat" title="Andel &laquo;{{objekttype.navn}}&raquo; med &laquo;{{egenskapstype.navn}}&raquo; i {{kolonne.navn}}">
+                    
+                    <a ng-href="https://www.vegvesen.no/vegkart/vegkart/#!/kartlag:geodata/sok:{{resultat[objekttype.id][inndeling+kolonne.nr][vegkategori][egenskapstype.navn].url}}" target="_blank">
+                    <span ng-bind-html="resultat[objekttype.id][inndeling+kolonne.nr][vegkategori][egenskapstype.navn].prosent" class="prosent"></span>
+                    </a>
+
+
+                </td>
+            </tr>
+            <tr ng-repeat-end ng-if="usynlig"></tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

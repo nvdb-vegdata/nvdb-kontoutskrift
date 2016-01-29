@@ -1,0 +1,217 @@
+[
+    {
+        "navn": "Bomstasjon",
+        "id": 45,
+        "egenskapstyper": [
+            {
+                "navn": "Bompengeanlegg_Id",
+                "id": 9596
+            },
+            {
+                "navn": "Bomstasjonstype",
+                "id": 9390
+            },
+            {
+                "navn": "Gratis gjennomkjøring ved HC-brikke",
+                "id": 9404
+            },
+            {
+                "navn": "Innkrevningsretning",
+                "id": 9414
+            },
+            {
+                "navn": "Rushtidsavgift",
+                "id": 9409
+            },
+            {
+                "navn": "Timesregel",
+                "id": 9412
+            },
+            {
+                "navn": "Vedtatt til år",
+                "id": 9413
+            }
+        ]
+    },   
+    {
+        "navn": "Bruksklasse, uoffisiell",
+        "id": 104,
+        "egenskapstyper": [
+            {
+                "navn": "Maks vogntoglengde",
+                "id": 5186
+            },
+            {
+                "navn": "Strekningsbeskrivelse",
+                "id": 5183
+            },
+            {
+                "navn": "Veggruppe",
+                "id": 5184
+            }
+        ]
+    },            
+    {
+        "navn": "Fartsgrense",
+        "id": 105,
+        "egenskapstyper": [
+            {
+                "navn": "Gyldig fra dato",
+                "id": 5127
+            }
+        ]
+    },
+    {
+        "navn": "Fartsgrense, variabel",
+        "id": 721,
+        "egenskapstyper": [
+            {
+                "navn": "Arkivnummer",
+                "id": 9399
+            },
+            {
+                "navn": "Gyldig fra dato",
+                "id": 9400
+            },
+            {
+                "navn": "Vedtaksnummer",
+                "id": 9402
+            }
+        ]
+    },       
+    {
+        "navn": "Høydebegrensning",
+        "id": 591,
+        "egenskapstyper": [
+            {
+                "navn": "Beregnet høyde",
+                "id": 10247
+            },
+            {
+                "navn": "Bredde",
+                "id": 3846
+            },
+            {
+                "navn": "H-min, høyre kant",
+                "id": 3868
+            },
+            {
+                "navn": "H-min, midt",
+                "id": 3869
+            },
+            {
+                "navn": "H-min, venstre kant",
+                "id": 3870
+            },
+            {
+                "navn": "Måledato",
+                "id": 9489
+            },
+            {
+                "navn": "Målemetode",
+                "id": 9490
+            },
+            {
+                "navn": "Navn",
+                "id": 5778
+            }
+        ]
+    },                  
+    {
+        "navn": "Tunnel",
+        "id": 581,
+        "egenskapstyper": [
+            {
+                "navn": "Alarm til VTS ved fjerning av brannslokker",
+                "id": 3918
+            },
+            {
+                "navn": "Antall parallelle hovedløp",
+                "id": 3947
+            },
+            {
+                "navn": "Kabler seksjonert",
+                "id": 3915
+            },
+            {
+                "navn": "Kabler sikret v nedgraving",
+                "id": 3916
+            },
+            {
+                "navn": "Navn",
+                "id": 5225
+            },
+            {
+                "navn": "Restriksjonsklasse",
+                "id": 9131
+            },
+            {
+                "navn": "Service-/nødtelefoner til VTS",
+                "id": 3917
+            },
+            {
+                "navn": "Sum lengde alle løp",
+                "id": 8150
+            },
+            {
+                "navn": "Sum lengde ramper",
+                "id": 8151
+            },
+            {
+                "navn": "Sykkelforbud",
+                "id": 9518
+            },
+            {
+                "navn": "Tunnelklasse, prosjektert",
+                "id": 9134
+            },
+            {
+                "navn": "Undersjøisk",
+                "id": 9517
+            }
+        ]
+    },                             
+    {
+        "navn": "Tunnelløp",
+        "id": 67,
+        "egenskapstyper": [
+            {
+                "navn": "Kategori",
+                "id": 8944
+            },
+            {
+                "navn": "Lengde",
+                "id": 1317
+            },
+            {
+                "navn": "Navn",
+                "id": 1081
+            },
+            {
+                "navn": "Tunnelprofil",
+                "id": 1977
+            },
+            {
+                "navn": "Type tunnelløp",
+                "id": 1130
+            },
+            {
+                "navn": "Åpningsår",
+                "id": 8356
+            }
+        ]
+    }
+]
+
+               
+                
+                  
+                    
+            
+          
+               
+
+
+
+
+

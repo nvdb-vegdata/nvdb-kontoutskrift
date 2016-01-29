@@ -1,0 +1,179 @@
+[
+    {
+        "navn": "Belysningspunkt",
+        "id": 87,
+        "egenskapstyper": [
+            {
+                "navn": "Plassering",
+                "id": 1874
+            }
+        ]
+    },                        
+    {
+        "navn": "Lysmast",
+        "id": 181,
+        "egenskapstyper": [
+            {
+                "navn": "Total mastelengde",
+                "id": 1338
+            },
+            {
+                "navn": "Type",
+                "id": 1189
+            }
+        ]
+    },              
+    {
+        "navn": "Rasteplass",
+        "id": 39,
+        "egenskapstyper": [
+            {
+                "navn": "Antall oppstillingspl. Forflytningshemmede",
+                "id": 9415
+            },
+            {
+                "navn": "Antall oppstillingspl. små kjt.",
+                "id": 1805
+            },
+            {
+                "navn": "Antall oppstillingspl. store kjt.",
+                "id": 1816
+            },
+            {
+                "navn": "Areal, kjørbart",
+                "id": 8766
+            },
+            {
+                "navn": "Areal, totalt",
+                "id": 1355
+            },
+            {
+                "navn": "Fast dekke",
+                "id": 4564
+            },
+            {
+                "navn": "Kjøretøytype, dimensjonerende",
+                "id": 1773
+            },
+            {
+                "navn": "Lovlig adkomst",
+                "id": 2037
+            },
+            {
+                "navn": "Type",
+                "id": 2036
+            },
+            {
+                "navn": "Vinterstengning",
+                "id": 8765
+            }
+        ]
+    },                             
+    {
+        "navn": "Rekkverk",
+        "id": 5,
+        "egenskapstyper": [
+            {
+                "navn": "Bruksområde",
+                "id": 1248
+            },
+            {
+                "navn": "Oppsettingsår",
+                "id": 7558
+            },
+            {
+                "navn": "Rekkverkstype",
+                "id": 1089
+            }
+        ]
+    },
+    {
+        "navn": "Rekkverksende",
+        "id": 14,
+        "egenskapstyper": [
+            {
+                "navn": "Type",
+                "id": 1096
+            }
+        ]
+    }, 
+    {
+        "navn": "Skiltplate",
+        "id": 96,
+        "egenskapstyper": [
+            {
+                "navn": "Skiltnummer",
+                "id": 5530
+            },
+            {
+                "navn": "Ansiktsside",
+                "id": 1894
+            },
+            {
+                "navn": "Folieklasse",
+                "id": 1921
+            },
+            {
+                "navn": "Oppsettingsdato",
+                "id": 2108
+            }
+        ]
+    },            
+    {
+        "navn": "Skiltpunkt",
+        "id": 95,
+        "egenskapstyper": [
+            {
+                "navn": "Antall oppsettingsutstyr",
+                "id": 1877
+            },
+            {
+                "navn": "Avskjæringsledd",
+                "id": 8772
+            },
+            {
+                "navn": "Fundamentering",
+                "id": 1671
+            },
+            {
+                "navn": "Oppsettingsutstyr",
+                "id": 1876
+            }
+        ]
+    },       
+    {
+        "navn": "Skjerm",
+        "id": 3,
+        "egenskapstyper": [
+            {
+                "navn": "Areal",
+                "id": 1352
+            },
+            {
+                "navn": "Bruksområde",
+                "id": 1247
+            },
+            {
+                "navn": "Høyde",
+                "id": 9823
+            },
+            {
+                "navn": "Materiale skjerm",
+                "id": 1087
+            }
+        ]
+    }
+]
+
+
+
+                  
+                   
+             
+                   
+        
+
+
+
+
+
