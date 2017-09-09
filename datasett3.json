@@ -1,31 +1,4 @@
-[
-    {
-        "navn": "Kabel",
-        "id": 92,
-        "egenskapstyper": [
-            {
-                "navn": "Bruksområde",
-                "id": 1274
-            },
-            {
-                "navn": "Driftsattår",
-                "id": 4076
-            },
-            {
-                "navn": "Farge",
-                "id": 1293
-            },
-            {
-                "navn": "Framføringsveg",
-                "id": 2023
-            },
-            {
-                "navn": "Typebetegnelse",
-                "id": 1148
-            }
-        ]
-    },
-    {
+[    {
         "navn": "Kum",
         "id": 83,
         "egenskapstyper": [

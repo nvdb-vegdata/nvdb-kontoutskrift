@@ -1,6 +1,8 @@
 ﻿<?php 
 
 function getData($path) {
+    $path = str_replace('"', "%22", $path);
+
     $path = str_replace("#", "%23", $path);
     $path = str_replace("+", "%2B", $path);
     $path = str_replace("Æ", "%C3%86", $path);
@@ -10,6 +12,16 @@ function getData($path) {
     $path = str_replace("Å", "%C3%85", $path);
     $path = str_replace("å", "%C3%A5", $path);
     $path = str_replace(" ", "%20", $path);
+
+    $path = str_replace("[", "%5B", $path);
+    $path = str_replace("]", "%5D", $path);
+    $path = str_replace("{", "%7B", $path);
+    $path = str_replace("}", "%7D", $path);
+    
+	$path = str_replace(":", "%3A", $path);
+	$path = str_replace(",", "%2C", $path);
+	
+	
     $url = 'https://www.vegvesen.no/nvdb/api'.$path;
 
     $options = array(
