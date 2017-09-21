@@ -20,7 +20,7 @@
                 "id": 9414
             },
             {
-                "navn": "Rushtidsavgift",
+                "navn": "Tidsdifferensiert takst",
                 "id": 9409
             },
             {
@@ -34,8 +34,8 @@
         ]
     },   
     {
-        "navn": "Bruksklasse, uoffisiell",
-        "id": 104,
+        "navn": "Bruksklasse",
+        "id": 871,
         "egenskapstyper": [
             {
                 "navn": "Maks vogntoglengde",
