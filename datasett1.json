@@ -89,20 +89,11 @@
     		"id": 10901,
     		"navn": "Bruksklasse"
     	}, {
-    		"id": 10907,
-    		"navn": "Bruksklasse vinter"
-    	}, {
     		"id": 10913,
     		"navn": "Maks vogntoglengde"
     	}, {
     		"id": 10919,
     		"navn": "Strekningsbeskrivelse"
-    	}, {
-    		"id": 10925,
-    		"navn": "Maks totalvekt kjøretøy, skiltet"
-    	}, {
-    		"id": 10926,
-    		"navn": "Maks totalvekt vogntog, skiltet"
     	}],
     	"id": 904,
     	"navn": "Bruksklasse, normaltransport"
@@ -110,9 +101,6 @@
     	"egenskapstyper": [{
     		"id": 10899,
     		"navn": "Bruksklasse"
-    	}, {
-    		"id": 10905,
-    		"navn": "Bruksklasse vinter"
     	}, {
     		"id": 10911,
     		"navn": "Maks vogntoglengde"
@@ -130,17 +118,11 @@
     		"id": 10897,
     		"navn": "Bruksklasse"
     	}, {
-    		"id": 10903,
-    		"navn": "Bruksklasse vinter"
-    	}, {
     		"id": 10909,
     		"navn": "Maks vogntoglengde"
     	}, {
     		"id": 10915,
     		"navn": "Strekningsbeskrivelse"
-    	}, {
-    		"id": 10921,
-    		"navn": "Maks totalvekt"
     	}],
     	"id": 900,
     	"navn": "Bruksklasse, tømmertransport"
